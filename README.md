@@ -41,7 +41,11 @@ docker exec -it samba-one samba-tool user setpassword admin --newpassword="NewPa
 ### Network & Troubleshooting
 
 **Verify open ports on the host:**
+```bash
 ss -tuln | grep 389
+```
 
 **Test LDAP connection locally (requires `ldap-utils`):**
+```bash
 ldapsearch -H ldap://127.0.0.1:3891 -x -b "DC=one,DC=com" -D "CN=admin,CN=Users,DC=one,DC=com" -w "Nutanix/4u"
+```
