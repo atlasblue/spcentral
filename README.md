@@ -1,6 +1,6 @@
 # 🏢 Samba AD DC Tenant Deployment Lab
 
-This repository contains the automated deployment script for provisioning containerized Samba Active Directory Domain Controllers. It is designed to quickly spin up multiple isolated LDAP environments for testing with Nutanix Prism Central.
+This repository contains the automated deployment script for provisioning containerized Samba Active Directory Domain Controllers. It is designed to quickly spin up multiple isolated LDAP environments for testing with Nutanix Central and SP Central
 
 ## 🚀 Quick Start
 
