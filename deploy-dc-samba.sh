@@ -1,6 +1,7 @@
 #!/bin/bash
 [ "$EUID" -ne 0 ] && echo "Must run as root" && exit 1
 
+# domain names list and associated ports, don't use 3889
 DOMAINS=("mocha.local:3891" "latte.local:3892" "espresso.demo:3893")
 USERS=("admin" "consumer")
 PASS="Nutanix/4u"
