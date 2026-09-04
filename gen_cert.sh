@@ -4,8 +4,8 @@
 set -e
 
 echo "Generating Root CA..."
-# 1. Generate Root Key (Prompts for an AES256 passphrase)
-openssl genrsa -aes256 -out rootCA.key 4096
+# 1. Generate Root Key (No passphrase prompt)
+openssl genrsa -out rootCA.key 4096
 
 # 2. Create Root Certificate 
 # CORRECTION: Added -subj to avoid a stalling interactive prompt during script execution
