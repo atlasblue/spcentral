@@ -9,7 +9,7 @@ openssl genrsa -out rootCA.key 4096
 
 # 2. Create Root Certificate 
 # CORRECTION: Added -subj to avoid a stalling interactive prompt during script execution
-openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.pem -subj "/CN=Nutanix Root CA"
+openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.pem -subj "/CN=Lab ROOT CA"
 
 echo "Creating Configuration File (csr-nc.conf)..."
 # 3. Create the configuration file dynamically using a heredoc block
@@ -43,7 +43,6 @@ openssl genrsa -out server-nc.key 2048
 openssl req -new -key server-nc.key -out server-nc.csr -config csr-nc.conf
 
 # 6. Sign the certificate with your Root CA
-# CORRECTION: Combined the trailing hyphens and line breaks from the image into a single continuous command
 openssl x509 -req -in server-nc.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out server-nc.crt -days 365 -sha256 -extfile csr-nc.conf -extensions req_ext
 
 echo "Converting Certificates for UI Deployment..."
