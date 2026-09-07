@@ -94,7 +94,7 @@ $Zone = "ntnxlab.local"
 $IPs = "172.16.29.190", "172.16.29.191" # Replace with your actual External IPs
 
 $Names = @(
-    # NC Records
+    # Nutanix Central Records
     "nc",
     "iam.nc",
     "ncm.data.nc",
@@ -102,7 +102,7 @@ $Names = @(
     "*.services.nc",
     "*.transport.nc",
     "*.tenants.nc",
-    # SP Records
+    # SP Central Records
     "spc",
     "iam.spc",
     "*.domains.spc",
