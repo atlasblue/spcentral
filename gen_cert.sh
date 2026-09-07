@@ -26,11 +26,11 @@ openssl req -x509 -new -nodes -key "$ROOT_DIR/rootCA.key" -sha256 -days 3650 -ou
 
 
 # ==========================================
-# 3. Generate NC (Nutanix Central) Certs
+# 3. Generate Nutanix Central Certs
 # ==========================================
-echo "Generating NC Certificates in $NC_DIR/..."
+echo "Generating Nutanx Central Certificates in $NC_DIR/..."
 
-# Create NC Config
+# Create Nutanix Central Config
 cat <<EOF > "$NC_DIR/csr-nc.conf"
 [ req ]
 prompt = no
@@ -38,7 +38,7 @@ req_extensions = req_ext
 distinguished_name = dn
 
 [ dn ]
-CN = spc.ntnxlab.local
+CN = nc.ntnxlab.local
 
 [ req_ext ]
 subjectAltName = @alt_names
@@ -66,26 +66,28 @@ openssl rsa -in "$NC_DIR/server-nc.key" > "$NC_DIR/server-nc-key.txt"
 
 
 # ==========================================
-# 4. Generate SP (Service Provider) Certs
+# 4. Generate SP Central Certs
 # ==========================================
-echo "Generating SP Certificates in $SP_DIR/..."
+echo "Generating SP Central Certificates in $SP_DIR/..."
 
-# Create SP Config (Update DNS entries as needed for your specific SP architecture)
+# Create SP Central Config 
 cat <<EOF > "$SP_DIR/csr-sp.conf"
-[ req ]
-prompt = no
-req_extensions = req_ext
-distinguished_name = dn
-
-[ dn ]
-CN = sp.ntnxlab.local
-
-[ req_ext ]
-subjectAltName = @alt_names
-
-[ alt_names ]
-DNS.1 = sp.ntnxlab.local
-# DNS.2 = Add additional SP DNS records here if required
+[ req ] 
+prompt = no 
+req_extensions = req_ext 
+distinguished_name = dn 
+[ dn ] 
+CN = spc.ntnxlab.local 
+[ req_ext ] 
+subjectAltName = @alt_names 
+[ alt_names ] 
+DNS.1 = spc.ntnxlab.local 
+DNS.2 = iam.spc.ntnxlab.local 
+DNS.3 = ncm.data.spc.ntnxlab.local 
+DNS.4 = *.domains.spc.ntnxlab.local 
+DNS.5 = *.services.spc.ntnxlab.local 
+DNS.6 = *.transport.spc.ntnxlab.local 
+DNS.7 = *.tenants.spc.ntnxlab.local
 EOF
 
 # SP Private Key & CSR
