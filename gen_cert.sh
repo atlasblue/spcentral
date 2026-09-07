@@ -102,5 +102,5 @@ openssl x509 -in "$SP_DIR/server-sp.crt" > "$SP_DIR/server-sp-crt.txt"
 openssl rsa -in "$SP_DIR/server-sp.key" > "$SP_DIR/server-sp-key.txt"
 
 echo "================================================="
-echo "Certificate generation and organization complete!"
+echo "Certificate generation complete!"
 echo "Check the '$ROOT_DIR', '$NC_DIR', and '$SP_DIR' folders."
