@@ -127,4 +127,4 @@ EOF
 echo "================================================="
 echo "Execution complete!"
 echo "Certificates are in '$ROOT_DIR', '$NC_DIR', and '$SP_DIR'."
-echo "PowerShell DNS script is located at '$SCRIPTS_DIR/setup_dns.ps1'."
+echo "PowerShell DNS script is located at '$DNS_DIR/config_dns.ps1'."
