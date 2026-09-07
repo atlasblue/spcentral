@@ -9,7 +9,7 @@ set -e
 ROOT_DIR="root_ca"
 NC_DIR="nc"
 SP_DIR="sp"
-DNS_DIR="dns_config"
+DNS_DIR="dns"
 
 echo "Creating output directories..."
 mkdir -p "$ROOT_DIR" "$NC_DIR" "$SP_DIR" "$DNS_DIR"
