@@ -91,7 +91,7 @@ echo "Generating PowerShell DNS setup script in $DNS_DIR/..."
 cat << 'EOF' > "$DNS_DIR/config_dns.ps1"
 # Define variables
 $Zone = "ntnxlab.local"
-$IPs = "172.16.29.190", "172.16.29.191" # Replace with your actual External IPs
+$IPs = "x.x.x.200", "x.x.x.201" # Replace with your actual External IPs
 
 $Names = @(
     # Nutanix Central Records
