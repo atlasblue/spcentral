@@ -15,7 +15,7 @@ sudo ./deploy-batch-samba.sh
 
 | Action | Command |
 | :--- | :--- |
-| **View all running tenants** | `docker ps -a \| grep samba` |
+| **View all running tenants** | `docker ps -a ` |
 | **View live logs** | `docker logs -f samba-one` |
 | **Restart a tenant** | `docker restart samba-one` |
 
