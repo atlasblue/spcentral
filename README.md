@@ -1,15 +1,6 @@
 # 🏢 Multi-Tenant Samba AD DC Deployment for Nutanix Prism Central
 
-An automated, lightweight deployment tool for provisioning multiple isolated Samba Active Directory Domain Controller (AD DC) containers on a single Linux host. Designed specifically for LDAP integration testing with Nutanix Prism Central and multi-tenant lab environments.
-
----
-
-## 📋 Features
-
-* **Multi-Tenant Isolation:** Deploy 10+ distinct AD DC tenants on a single host.
-* **Efficient Base Image:** Builds a single base Docker image once, accelerating container spin-up.
-* **Persistent Storage:** Config and directory data persist across container restarts in `/opt/samba-tenants/<domain_fqdn>`.
-* **Zero Host Dependency Clutter:** No per-tenant `docker-compose` or `Dockerfile` overhead.
+An automated, lightweight deployment tool for provisioning multiple isolated Samba Active Directory Domain Controller (AD DC) containers on a single Linux host. Designed specifically for LDAP integration testing with Nutanix Prism, Nutanix Central and SP Central lab environments.
 
 ---
 
