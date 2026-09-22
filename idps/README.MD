@@ -18,7 +18,7 @@ An automated, lightweight deployment tool for provisioning multiple isolated Sam
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/atlasblue/spcentral.git
-cd spcentral
+cd spcentral/idps/
 ```
 
 ### 2. Configure Domain Tenants
