@@ -17,12 +17,12 @@ An automated, lightweight deployment tool for provisioning multiple isolated Sam
 
 ### 1. Clone the Repository
 ```bash
-git clone [https://github.com/atlasblue/spcentral.git](https://github.com/atlasblue/spcentral.git)
+git clone https://github.com/atlasblue/spcentral.git
 cd spcentral
 ```
 
 ### 2. Configure Domain Tenants
-Edit `deploy-dc-samba.sh` to define your desired domains, custom LDAP ports, and default AD users:
+Edit `create_tenants_idps.sh` to define your desired domains, custom LDAP ports, and default AD users:
 
 ```bash
 # Configuration section inside deploy-dc-samba.sh
@@ -33,8 +33,8 @@ PASS="Nutanix/4u"
 
 ### 3. Make Script Executable & Run
 ```bash
-chmod +x deploy-dc-samba.sh
-sudo ./deploy-dc-samba.sh
+chmod +x create_tenants_idps.sh
+sudo ./create_tenants_idps.sh
 ```
 
 ---
