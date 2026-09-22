@@ -43,7 +43,7 @@ docker build -t samba-base "$BASE_DIR/base" -q
 
 # --- 3. DEPLOY TENANTS ---
 for E in "${DOMAINS[@]}"; do
-    D="${E\%\%:*}"; P="${E##*:}"
+    D="${E%%:*}"; P="${E##*:}"
     SD="${D%%.*}"; NB=$(echo "$SD" | tr 'a-z' 'A-Z')
     T_DIR="$BASE_DIR/$D"
 
