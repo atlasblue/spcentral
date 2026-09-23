@@ -25,7 +25,7 @@ cd spcentral/idps/
 Edit `create_tenants_idps.sh` to define your desired domains, custom LDAP ports, and default AD users:
 
 ```bash
-# Configuration section inside deploy-dc-samba.sh
+# Configuration section inside create_tenants_idps.sh
 DOMAINS=("acme.test:3891" "nova.local:3892" "velo.demo:3893")
 USERS=("admin" "consumer")
 PASS="Nutanix/4u"
@@ -44,14 +44,14 @@ sudo ./create_tenants_idps.sh
 ### ➕ Adding a New Tenant
 The script is idempotent—it automatically skips ports already in use.
 
-1. Open `deploy-dc-samba.sh` in a text editor.
+1. Open `create_tenants_idps.sh` in a text editor.
 2. Add your new domain FQDN and port to the `DOMAINS` array:
    ```bash
    DOMAINS=("acme.test:3891" "nova.local:3892" "apex.test:3894")
    ```
 3. Re-run the deployment script:
    ```bash
-   sudo ./deploy-dc-samba.sh
+   sudo ./create_tenants_idps.sh
    ```
    *Only the new domain (`apex.test` on port `3894`) will be provisioned; existing containers remain untouched.*
 
@@ -70,7 +70,7 @@ To permanently delete a tenant domain (e.g., `acme.test`):
    sudo rm -rf /opt/samba-tenants/acme.test
    ```
 
-3. **Update script array:** Remove `"acme.test:3891"` from `DOMAINS` in `deploy-dc-samba.sh` to prevent accidental redeployment.
+3. **Update script array:** Remove `"acme.test:3891"` from `DOMAINS` in `create_tenants_idps.sh` to prevent accidental redeployment.
 
 ---
 
