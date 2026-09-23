@@ -2,7 +2,18 @@
 [ "$EUID" -ne 0 ] && echo "Must run as root" && exit 1
 
 # --- CONFIGURATION ---
-DOMAINS=("acme.test:3891" "nova.local:3892")
+DOMAINS=(
+  "acme.fr:3891"
+  "nova.fr:3892"
+  "alpha.com:3893"
+  "beta.fr:3894"
+  "delta.com:3895"
+  "zenith.fr:3896"
+  "atlas.com:3897"
+  "orion.fr:3898"
+  "nexus.com:3899"
+  "vertex.fr:3900"
+)
 USERS=("admin" "consumer")
 PASS="Nutanix/4u"
 BASE_DIR="/opt/samba-tenants"
