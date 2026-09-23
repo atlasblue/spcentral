@@ -7,7 +7,7 @@ An automated, lightweight deployment tool for provisioning multiple isolated Sam
 ## 🛠️ Prerequisites & Requirements
 
 * **Host OS:** Rocky Linux 8/9, RHEL, CentOS, or Ubuntu Server.
-* **RAM:** Minimum 2 GB (supports ~10–12 active tenants).
+* **CPU/RAM:** Minimum 2 vCPU and 4 GB (supports ~10–20 active tenants).
 * **Permissions:** Root / `sudo` privileges.
 * **Network Notice:** The script automatically disables `firewalld` and sets SELinux to `permissive`/`disabled` to ensure unhindered container port mapping.
 
