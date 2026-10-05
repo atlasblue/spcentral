@@ -4,7 +4,6 @@ set -Eeuo pipefail
 PC_IP="x.x.x.x"
 PC_USER="admin"
 PC_PASS=""
-API_VERSION="${API_VERSION:-v4.2}"
 
 DOMAINS=(
   acme.fr nova.fr alpha.com beta.fr delta.com
